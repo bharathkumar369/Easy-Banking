@@ -1,38 +1,244 @@
-.App {
-  text-align: center;
+*,*::before,*::after{
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+  font-size: 18px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body{
+  font-family: 'Public Sans', sans-serif;
+}
+img{
+  max-width: 100%;
+}
+.navbar-container{
+  z-index: 1;
+  position: relative;
+}
+.navbar-flex{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0rem;
+  background-color: rgb(247, 247, 247);
+  
+}
+@media(max-width:610px){
+  .navbar-flex{
+    display: flex;
+    flex-direction: column;
+  }
+  .inline{
+    display: flex;
+    flex-direction: row;
   }
 }
+.logo{
+  cursor: pointer;
+}
+.navbar-container ul {
+  display: flex;
+  list-style-type: none;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+.navbar-container ul li{
+  padding: 0px 20px;
+  cursor: pointer;
+}
+.btn{
+  background: hsl(136, 65%, 51%);
+  text-decoration: none;
+  padding: .5rem 1rem;
+  color: white;
+  border-radius: 1rem;
+  
+}
+.btn:hover{
+  background-color:black;
+  color: hsl(136, 65%, 51%);
+}
+.menu{
+  display: none;
+}
+.menu.open{
+  display: block;
+}
+
+
+/* ---------------main--------------------------------------------------- */
+.main-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+@media(max-width:600px){
+  .main-container{
+    display: grid;
+    grid-template-rows: 1fr;
+    position: relative;
+  }
+  .mockup-container{
+    position: absolute;
+    top:-120px ;
+    right:-70px;
+    
+  } 
+}
+.main-left{
+  padding-left:  10em;
+}
+.main-container h1{
+  font-weight: 700;
+}
+.main-container p{
+  font-weight: 100;
+  width: 70%;
+}
+.main-left{
+  padding-top:5em;
+}
+
+.intro{
+  height: 20rem;
+  width: 100%;
+  
+}
+.mockup{
+  height:42rem;
+  padding-top: 5.5rem;
+}
+.mockup-container{
+  position: absolute;
+  top:-120px ;
+  right:-70px;
+  
+} 
+
+
+
+/* -------------------------------------------------------------------------- */
+
+
+
+/* ---------------middle-grid------------------------------------------------- */
+.middle-container{
+  background-color: hsl(0, 0%, 91%);
+}
+.middle{
+  padding: 2rem 0rem;
+}
+.middle-text h1{
+  font-weight: 400;
+}
+.middle-text p{
+  font-weight: 100;
+  width: 80%;
+  max-width: 700px;
+  padding-bottom: 3rem;
+}
+.middle-grid h4{
+  font-weight: 700;
+}
+.middle-grid p{
+  font-weight: 100;
+}
+.middle-grid{
+  padding-bottom: 2rem;
+}
+/* ----------------------------------------------------------------------- */
+
+
+/* -----------Latest layout------------------------- */
+.box-layout{
+  width: 70%;
+  margin: 0 auto;
+  padding: 2rem 0rem;
+}
+.grid-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+
+}
+@media(max-width:400px){
+  .grid-box{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .card{
+    display: grid;
+    grid-template-columns:1fr ;
+    height: 300px;
+  }
+}
+.card{
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  border-radius: 100px;
+  
+}
+.image-container{
+  width: 100%;
+}
+.currency,.restaurant,.plane,.confetti{
+  /* width: 100%;
+  align-self: center; */
+height: 100%;
+}
+.card__text{
+  padding: 0rem .5rem;
+}
+.card__text p{
+  font-size: .5rem;
+}
+.card__text h3{
+  font-size: 1rem;
+  font-weight: 700;
+}
+.card__text h5{
+  font-size: .8rem;
+  font-weight: 300;
+}
+/* ------------------------------------------------------- */
+
+
+
+/* ------footer container----------------------------------- */
+.footer-container{
+ color: white;
+  background-color: hsl(233, 26%, 24%);
+  display: flex;
+  flex-direction: row;
+}
+
+
+.flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.inline{
+  display: inline-block;
+}
+.logo-div{
+  display: flex;
+  gap:2rem;
+  flex-direction: column;
+}
+.trademark{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1.5rem;
+  padding-left: 10em;
 }
-
-.App-link {
-  color: #61dafb;
+.trademark p{
+  font-size:12px;
+  font-weight: 20px;
 }
+/* --------------------------------- */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media(max-width:1000px){
+  html{
+    font-size: 10px;
   }
 }
